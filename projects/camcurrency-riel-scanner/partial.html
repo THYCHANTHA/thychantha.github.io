@@ -1,0 +1,16 @@
+<div class="pd-hero">
+  <p class="pd-cat">Computer Vision | Full-Stack</p>
+  <h2>CamCurrency: Khmer Riel Scanner &amp; Calculator</h2>
+  <p class="pd-sum">Detects, classifies and sums Cambodian riel banknotes from images or a webcam, from data collection to a containerised deployment. ITC Group 5 team project, led by me.</p>
+  <div class="pd-actions">
+    <a class="btn" href="projects/camcurrency-riel-scanner">Open full page</a>            <a class="btn ghost" href="https://github.com/THYCHANTHA/Cam-Currency-ITC-AMS" target="_blank" rel="noopener">View on GitHub</a>  </div>
+</div>
+
+  <div class="pd-media"><a href="images/thumbs/camcurrency-riel-scanner.webp" data-lightbox="pd-camcurrency-riel-scanner" data-title="CamCurrency: Khmer Riel Scanner &amp; Calculator"><img src="images/thumbs/camcurrency-riel-scanner.webp" alt="CamCurrency: Khmer Riel Scanner &amp; Calculator preview" loading="eager"></a></div>
+
+<div class="pd-body">
+  <section class="pd-sec"><h3>Problem</h3><p>Counting mixed banknotes by hand is slow and error-prone. The system recognises each note and adds up the total automatically.</p></section><section class="pd-sec"><h3>Overview</h3><p>A full-stack application covering the whole pipeline from raw data collection and model training to a containerised deployment behind Nginx on a DigitalOcean droplet.</p></section><section class="pd-sec"><h3>Methodology</h3><ul class="pd-list "><li>YOLOv8 custom-trained to identify 7 classes of riel notes (100 to 50,000 riel)</li><li>FastAPI backend, React with Tailwind frontend (dark and light mode), PostgreSQL detection history</li><li>Docker Compose orchestration; Nginx reverse proxy on a DigitalOcean droplet</li></ul></section><section class="pd-sec"><h3>Key features</h3><ul class="pd-list "><li>Real-time calculator that sums detected notes</li><li>Live webcam integration</li></ul></section><section class="pd-sec"><h3>Technologies</h3><ul class="tags"><li>YOLOv8</li><li>FastAPI</li><li>React</li><li>PostgreSQL</li><li>Docker</li><li>Nginx</li></ul></section><section class="pd-sec"><h3>Results</h3><ul class="pd-list pd-results"><li>The repository README reports a model trained on 1,000+ images with 94% mAP (as stated by the team; not re-verified here)</li></ul><p style="margin-top:18px">My role as team leader: system architecture, YOLOv8 model training, FastAPI backend and DevOps (Docker and VPS deployment).</p></section><section class="pd-sec"><h3>Links</h3><div class="pd-links"><a class="btn ghost" href="https://github.com/THYCHANTHA/Cam-Currency-ITC-AMS" target="_blank" rel="noopener">GitHub</a></div></section>  <nav class="pd-nav" aria-label="More projects">
+    <a class="link-arrow" href="projects/chatbot-administration" data-project="chatbot-administration">&larr; Chatbot Administration</a>
+    <a class="link-arrow" href="projects/adult-census-income-analysis" data-project="adult-census-income-analysis">Adult Census Income Analysis &rarr;</a>
+  </nav>
+</div>
