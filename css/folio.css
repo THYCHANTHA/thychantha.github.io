@@ -62,10 +62,13 @@ html.leaving body { opacity: 0; transition: opacity .28s ease; }
 /* Header */
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 100; height: var(--header-h); display: flex; align-items: center; justify-content: space-between;
-  padding: 0 clamp(20px, 4vw, 56px); background: rgba(255, 255, 255, .8); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px);
-  border-bottom: 1px solid transparent; transition: border-color .3s, background .3s;
+  padding: 0 clamp(20px, 4vw, 56px);
+  border-bottom: 1px solid transparent; transition: border-color .3s;
 }
-.site-header.scrolled { border-bottom-color: var(--line); background: rgba(255, 255, 255, .92); }
+/* The blurred background lives on a pseudo-element: backdrop-filter on the header itself would trap the fixed mobile menu inside the header box. */
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(255, 255, 255, .8); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); transition: background .3s; }
+.site-header.scrolled { border-bottom-color: var(--line); }
+.site-header.scrolled::before { background: rgba(255, 255, 255, .92); }
 .brand { font-family: var(--serif); font-size: 26px; letter-spacing: .04em; }
 .nav ul { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 38px); }
 .nav a:not(.btn) { font-size: 15px; position: relative; padding: 6px 0; color: var(--navy-2); transition: color .2s; }
@@ -80,6 +83,7 @@ html.leaving body { opacity: 0; transition: opacity .28s ease; }
 
 @media (max-width: 860px) {
   .nav-toggle { display: block; }
+  .brand { position: relative; z-index: 120; }
   .nav { position: fixed; inset: 0; background: #fff; padding: calc(var(--header-h) + 24px) 28px 40px; transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .35s var(--ease), transform .45s var(--ease), visibility 0s .35s; }
   .nav.open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
   .nav ul { flex-direction: column; align-items: flex-start; gap: 6px; }
