@@ -388,7 +388,7 @@ html.leaving body { opacity: 0; transition: opacity .28s ease; }
 .pd-placeholder { color: var(--muted); font-style: italic; }
 .pd-shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
 .pd-shots a { display: block; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--blue-50); }
-.pd-shots img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .7s var(--ease); }
+.pd-shots img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; transition: transform .7s var(--ease); }
 .pd-shots a:hover img { transform: scale(1.06); }
 .pd-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .pd-nav { display: flex; justify-content: space-between; gap: 16px; padding-top: 24px; flex-wrap: wrap; }
