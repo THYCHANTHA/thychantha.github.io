@@ -425,3 +425,8 @@ html.leaving body { opacity: 0; transition: opacity .28s ease; }
   .marquee-track { animation: none; }
   .panel { transition: none; }
 }
+
+/* thesis advisor line */
+.advisor-line { margin-top: 8px; font-size: 15px; color: var(--muted, #4a5b78); }
+.advisor-line a { color: var(--blue-600, #2f6fed); text-decoration: underline; text-underline-offset: 3px; }
+.advisor-line strong { color: var(--navy); font-weight: 600; }
