@@ -325,3 +325,9 @@
     });
   }
 })();
+
+/* ---------- Failover: install the service worker (only on the main host) so visitors are sent to the GitHub Pages mirror if this server is ever down ---------- */
+(function () {
+  if (!('serviceWorker' in navigator) || !/(^|\.)wuaze\.com$/.test(location.hostname)) return;
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+})();
