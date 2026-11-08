@@ -331,3 +331,17 @@
   if (!('serviceWorker' in navigator) || !/(^|\.)wuaze\.com$/.test(location.hostname)) return;
   window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
 })();
+
+/* ---------- References: reveal a phone number on click ---------- */
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.ref-phone');
+    if (!b) return;
+    try {
+      var num = atob(b.getAttribute('data-p'));
+      var a = document.createElement('a');
+      a.href = 'tel:' + num.replace(/\s+/g, ''); a.textContent = num;
+      b.replaceWith(a);
+    } catch (err) {}
+  });
+})();

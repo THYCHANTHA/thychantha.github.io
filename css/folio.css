@@ -430,3 +430,14 @@ html.leaving body { opacity: 0; transition: opacity .28s ease; }
 .advisor-line { margin-top: 8px; font-size: 15px; color: var(--muted, #4a5b78); }
 .advisor-line a { color: var(--blue-600, #2f6fed); text-decoration: underline; text-underline-offset: 3px; }
 .advisor-line strong { color: var(--navy); font-weight: 600; }
+
+/* references */
+.refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.ref-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 28px; background: #fff; }
+.ref-card h4 { font-size: clamp(24px, 2.4vw, 30px); margin-bottom: 6px; }
+.ref-role { color: var(--navy-2); font-size: 15px; line-height: 1.5; margin-bottom: 14px; }
+.ref-contact { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 15px; }
+.ref-contact a, .ref-links a { color: var(--blue-700, #2457c5); text-decoration: underline; text-underline-offset: 3px; }
+.ref-phone { font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--blue-50, #f3f8ff); color: var(--navy); border-radius: 999px; padding: 5px 14px; cursor: pointer; }
+.ref-phone:hover { border-color: var(--blue-500, #4a8bff); }
+.ref-links { margin-top: 12px; display: flex; gap: 6px 16px; flex-wrap: wrap; font-size: 14px; }
